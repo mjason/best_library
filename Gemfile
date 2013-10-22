@@ -4,7 +4,8 @@ source 'http://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+gem 'mysql2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -52,6 +53,8 @@ group :test, :development do
 
   # 开发服务器
   gem "thin"
+
+  gem 'sqlite3'
 
   # 测试覆盖率
   gem 'simplecov', :require => false, :group => :test
