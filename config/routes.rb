@@ -1,5 +1,5 @@
 BestLibrary::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {registrations: "registrations"} 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   namespace :api do
