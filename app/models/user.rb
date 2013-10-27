@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates_presence_of :name, :phone 
+  validates :phone, numericality: true, length: { is: 11 }
+
   has_many :books
 
   def reset_token
